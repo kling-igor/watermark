@@ -1,6 +1,6 @@
-import React, { PureComponent } from "react"
+import React, { PureComponent } from 'react'
 
-import styled, { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
 
     padding: 8px;
   }
-`;
+`
 
 export default class App extends PureComponent {
   render() {
