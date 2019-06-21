@@ -1,35 +1,19 @@
 import React, { PureComponent } from 'react'
+import styled from 'styled-components'
 
-import styled, { createGlobalStyle } from 'styled-components'
+import { GlobalStyle } from './style'
 
-const GlobalStyle = createGlobalStyle`
-  html {
-    
-    height: 100%;
-    margin: 0;
-  }
-
-  body {
-    padding: 0;
-    margin: 0;
-    font-family: Roboto, sans-serif;
-    overflow: hidden;
-    background-color: white;
-    height: 100%;
-    margin: 0;
-    overflow: hidden !important;
-  }
-
-  #app {
-    min-height: 100%;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-
-    padding: 8px;
-  }
+const ContainerStyle = styled.div`
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #293742;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* user-select: none;
+  pointer-events: none; */
 `
 
 export default class App extends PureComponent {
@@ -37,7 +21,19 @@ export default class App extends PureComponent {
     return (
       <>
         <GlobalStyle />
-        <div>HELLO WORLD!</div>
+        <ContainerStyle>
+          <div
+            style={{
+              fontFamily: 'terminatorFont',
+              letterSpacing: '10px',
+              fontSize: '6em',
+              color: 'rgba(53,62,66, 1)',
+              textShadow: '0px -1px 0px rgba(255,255,255,.5)'
+            }}
+          >
+            VISION
+          </div>
+        </ContainerStyle>
       </>
     )
   }
